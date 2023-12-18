@@ -1,1 +1,0 @@
-const {MaltasRecetas} = require('../src/db')

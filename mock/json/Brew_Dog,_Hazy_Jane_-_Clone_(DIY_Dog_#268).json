@@ -1,0 +1,156 @@
+{
+  "name": "Brew Dog, Hazy Jane - Clone (DIY Dog #268)",
+  "author": "Brew Crew",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2Fd1kXYFEOtjcJA2XE83wvFcWzu6I3%2Fimages%2Frecipes%2FzuVTvz2VFsgoOxSMlTYXWgLhmx5bXQ%2FzuVTvz2VFsgoOxSMlTYXWgLhmx5bXQ.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 5.91,
+  "originalGravity": 1.055419906,
+  "finalGravity": 1.01,
+  "ibu": 7.6,
+  "colorSRM": 3.6,
+  "batchSize": 13,
+  "mashWaterAmount": 9.12,
+  "spargeWaterAmount": 9.33,
+  "boilTime": 60,
+  "style": {
+    "abvMin": 6,
+    "colorMin": 3,
+    "type": "IPA",
+    "name": "New England IPA",
+    "ogMax": 1.085,
+    "carbonationStyle": "NEIPA",
+    "categoryNumber": "21",
+    "lovibondMax": 7,
+    "buGuMin": 0.34,
+    "styleLetter": "B",
+    "fgMax": 1.015,
+    "abvMax": 9,
+    "ibuMax": 60,
+    "buGuMax": 0.83,
+    "ibuMin": 25,
+    "lovibondMin": 3,
+    "styleGuide": "BJCP Provisional",
+    "fgMin": 1.01,
+    "ogMin": 1.06,
+    "rbrMax": 0.87,
+    "colorMax": 7,
+    "rbrMin": 0.36,
+    "category": "IPA",
+    "_id": "default-bjcp-neipa"
+  },
+  "notes": "Recipe copied from Brewdog & Friends magazine issue #001. \n\nDeviations:\n- Current recipe indicates the beer will be stronger than the original 5%. \n\nAlterations:\n- Acidulated malt to lower PH. \n- Recipe does not include yeast, WLP066 chosen for suitability for NEIPAs. \n- Scaled down from a 20L recipe.",
+  "fermentables": [
+    {
+      "name": "Extra Pale Maris Otter® Malt",
+      "potential": 1.038,
+      "amount": 2.238,
+      "color": 1.725888
+    },
+    {
+      "name": "Extra Pale Maris Otter® Malt",
+      "potential": 1.038,
+      "amount": 0.543,
+      "color": 1.725888
+    },
+    {
+      "name": "Wheat Malt",
+      "potential": 1.03772,
+      "amount": 0.339,
+      "color": 2.0304569
+    },
+    {
+      "name": "Flaked Torrefied Oats",
+      "potential": 1.036,
+      "amount": 0.136,
+      "color": 2.5380711
+    },
+    {
+      "name": "Acidulated",
+      "potential": 1.03,
+      "amount": 0.12,
+      "color": 1.8
+    }
+  ],
+  "hops": [
+    {
+      "name": "Chinook",
+      "amount": 0.6,
+      "use": "Boil",
+      "time": 10,
+      "ibu": 0.4,
+      "alpha": 8.2
+    },
+    {
+      "name": "Amarillo",
+      "amount": 11.4,
+      "use": "Boil",
+      "time": 0,
+      "ibu": 2.2,
+      "alpha": 9.2
+    },
+    {
+      "name": "Chinook",
+      "amount": 11.4,
+      "use": "Boil",
+      "time": 0,
+      "ibu": 1.9,
+      "alpha": 8.2
+    },
+    {
+      "name": "Simcoe",
+      "amount": 11.4,
+      "use": "Boil",
+      "time": 0,
+      "ibu": 3.1,
+      "alpha": 13.3
+    },
+    {
+      "name": "Amarillo",
+      "amount": 28.3,
+      "use": "Dry Hop",
+      "time": 0,
+      "ibu": 0,
+      "alpha": 9.2
+    },
+    {
+      "name": "Citra",
+      "amount": 28.3,
+      "use": "Dry Hop",
+      "time": 0,
+      "ibu": 0,
+      "alpha": 13
+    },
+    {
+      "name": "Mosaic",
+      "amount": 28.3,
+      "use": "Dry Hop",
+      "time": 0,
+      "ibu": 0,
+      "alpha": 12.25
+    },
+    {
+      "name": "Simcoe",
+      "amount": 28.3,
+      "use": "Dry Hop",
+      "time": 0,
+      "ibu": 0,
+      "alpha": 13.3
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "London Fog Ale",
+      "type": "Ale",
+      "amount": 2
+    }
+  ],
+  "miscs": [],
+  "mashTemperature": 66,
+  "mashTime": 25,
+  "mashOutTemperature": null,
+  "mashOutTime": null,
+  "primaryFermentationTemperature": 20,
+  "primaryFermentationTime": 14,
+  "seccondaryFermentationTemperature": null,
+  "seccondaryFermentationTime": null
+}

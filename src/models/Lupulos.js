@@ -1,60 +1,26 @@
 const { DataTypes } = require('sequelize')
-const lupulo = require('./Lupulo')
-const tipoLupulos = require('./TipoLupulos')
+// const lupulos = require('./Lupulos')
+// Listado de lúpulos comerciales con sus atributos.
 module.exports = (dataBase) => {
+  const lupulos = dataBase.define('Lupulos', {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+      allowNull: false
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    alpha: {
+      type: DataTypes.FLOAT,
+      allowNull: false
+    }
 
+  }, { timestamps: false })
 
-    const lupulos= dataBase.define('Lupulos', {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
-        },
-        cantidad:{
-            type: DataTypes.DECIMAL,
-            allowNull: false 
-        },
-        tiempo:{
-            type: DataTypes.INTEGER,
-            allowNull: false 
-
-        },
-        tipoLupuloId:{
-
-                 
-            type:DataTypes.INTEGER,
-            references:{
-
-                model:tipoLupulos,
-                key:'tipoLupulos_id'
-
-
-            }
-
-        },
-        lupuloId:{
-
-            
-            type:DataTypes.INTEGER,
-            references:{
-
-                model:lupulo,
-                key:'lupulo_id'
-
-
-            }
-
-
-        },
-        
-    }, {timestamps: false})
-
-
-    //tiene un nombre de lupulo
-    lupulos.belongsTo(lupulo, { foreignKey: 'lupuloId' });
-    //tiene un tipo de lupulo
-    lupulos.belongsTo(tipoLupulos, { foreignKey: 'tipoLupuloId' });
-
-    return lupulos
+  // muchos lupulos
+  //   lupulo.hasMany(lupulos, { foreignKey: 'lupuloId' })
+  return lupulos
 }

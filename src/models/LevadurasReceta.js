@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize')
 
 module.exports = (dataBase) => {
-  const fermentables = dataBase.define('Fermentables', {
+  const levadurasReceta = dataBase.define('LevadurasReceta', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -11,10 +11,9 @@ module.exports = (dataBase) => {
     cantidad: {
       type: DataTypes.DECIMAL,
       allowNull: false
-
     }
+  },
+  { timestamps: false })
 
-  }, { timestamps: false })
-
-  return fermentables
+  return levadurasReceta
 }

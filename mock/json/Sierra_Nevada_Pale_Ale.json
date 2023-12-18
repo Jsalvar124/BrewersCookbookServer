@@ -1,0 +1,108 @@
+{
+  "name": "Sierra Nevada Pale Ale",
+  "author": "BYO Magazine",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2FKdOykUUNPuZfWoIwSpSmLCgD2I03%2Fimages%2Frecipes%2F8Clw6xnAugAOEDMP2O1U9qJqnLDb7F%2F8Clw6xnAugAOEDMP2O1U9qJqnLDb7F.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 5.51,
+  "originalGravity": 1.053723052,
+  "finalGravity": 1.012,
+  "ibu": 39.6,
+  "colorSRM": 9.9,
+  "batchSize": 25,
+  "mashWaterAmount": 40.68,
+  "spargeWaterAmount": 0,
+  "boilTime": 90,
+  "style": {
+    "type": "Ale",
+    "buGuMax": 0.8,
+    "carbonationStyle": "_",
+    "abvMax": 5.9,
+    "buGuMin": 0.4,
+    "ogMax": 1.056,
+    "carbMax": 2.8,
+    "rbrMax": 0.79,
+    "category": "Lys Ale",
+    "fgMax": 1.016,
+    "lovibondMin": 6.1,
+    "categoryNumber": "04",
+    "styleGuide": "Norbrygg 2017",
+    "lovibondMax": 14.2,
+    "styleLetter": "E",
+    "rbrMin": 0.39,
+    "_id": "default-norbrygg-04E",
+    "carbMin": 2.3,
+    "ibuMax": 40,
+    "colorMin": 6.1,
+    "abvMin": 4.4,
+    "ogMin": 1.044,
+    "ibuMin": 20,
+    "fgMin": 1.008,
+    "name": "Amerikansk Pale Ale",
+    "colorMax": 14.2
+  },
+  "notes": "CLone recipie from BYO Magazine\n",
+  "fermentables": [
+    {
+      "name": "Pale Ale",
+      "potential": 1.038088,
+      "amount": 6.7,
+      "color": 3.0456853
+    },
+    {
+      "name": "Caramunich III",
+      "potential": 1.0368322,
+      "amount": 0.45,
+      "color": 71
+    }
+  ],
+  "hops": [
+    {
+      "name": "Magnum",
+      "amount": 5,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 5.8,
+      "alpha": 12
+    },
+    {
+      "name": "Perle",
+      "amount": 5,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 3.4,
+      "alpha": 7
+    },
+    {
+      "name": "Cascade",
+      "amount": 75,
+      "use": "Boil",
+      "time": 30,
+      "ibu": 30.4,
+      "alpha": 5.5
+    },
+    {
+      "name": "Cascade",
+      "amount": 75,
+      "use": "Boil",
+      "time": 0,
+      "ibu": 0,
+      "alpha": 5.5
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "California Ale",
+      "type": "Ale",
+      "amount": 1
+    }
+  ],
+  "miscs": [],
+  "mashTemperature": 68,
+  "mashTime": 60,
+  "mashOutTemperature": 76,
+  "mashOutTime": 5,
+  "primaryFermentationTemperature": 20,
+  "primaryFermentationTime": 14,
+  "seccondaryFermentationTemperature": null,
+  "seccondaryFermentationTime": null
+}

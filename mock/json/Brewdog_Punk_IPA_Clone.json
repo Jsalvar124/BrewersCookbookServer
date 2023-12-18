@@ -1,0 +1,191 @@
+{
+  "name": "Brewdog Punk IPA Clone",
+  "author": "VoC Home Brewery",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2FIcvPXhwhZUfvvKDf04dZyNXF6Cx1%2Fimages%2Frecipes%2FFnabVDFibAGDn6ejr98jwsxsHuQBM9%2FFnabVDFibAGDn6ejr98jwsxsHuQBM9.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 5.78,
+  "originalGravity": 1.051338016,
+  "finalGravity": 1.007,
+  "ibu": 105.1,
+  "colorSRM": 7.9,
+  "batchSize": 23,
+  "mashWaterAmount": 23.86,
+  "spargeWaterAmount": 13.66,
+  "boilTime": 60,
+  "style": {
+    "lovibondMin": 5,
+    "name": "American Pale Ale",
+    "colorMax": 10,
+    "buGuMax": 0.95,
+    "buGuMin": 0.57,
+    "category": "Pale American Ale",
+    "abvMin": 4.5,
+    "abvMax": 6.2,
+    "carbMin": null,
+    "rbrMin": 0.56,
+    "rbrMax": 0.94,
+    "styleLetter": "B",
+    "ibuMax": 50,
+    "type": "Pale Ale",
+    "styleGuide": "BJCP 2015",
+    "ogMin": 1.045,
+    "ogMax": 1.06,
+    "carbonationStyle": "18B",
+    "colorMin": 5,
+    "ibuMin": 30,
+    "carbMax": null,
+    "_id": "default-58",
+    "fgMax": 1.015,
+    "fgMin": 1.01,
+    "lovibondMax": 10,
+    "categoryNumber": "18"
+  },
+  "notes": "Punk IPA clone from the GF recipe library, this came out as close to an original beer that i have brewed, genuinely nice beer, looks, smells and most importantly tastes pretty close to the original.\nWyeast 1056 American Ale Yeast is a good sub for US05.\nThe 'Moderately Hard' water profile is for my area which i use every brew day.",
+  "fermentables": [
+    {
+      "name": "Golden Promise Pale Ale Malt - UK",
+      "potential": 1.037,
+      "amount": 5.23,
+      "color": 2.538071
+    },
+    {
+      "name": "Caramel/Crystal 90 - US",
+      "potential": 1.035,
+      "amount": 0.26,
+      "color": 90
+    }
+  ],
+  "hops": [
+    {
+      "name": "Chinook",
+      "amount": 26.7,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 34.7,
+      "alpha": 13
+    },
+    {
+      "name": "Ahtanum",
+      "amount": 16.6,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 10,
+      "alpha": 6
+    },
+    {
+      "name": "Chinook",
+      "amount": 20,
+      "use": "Boil",
+      "time": 30,
+      "ibu": 20.8,
+      "alpha": 13
+    },
+    {
+      "name": "Ahtanum",
+      "amount": 12.5,
+      "use": "Boil",
+      "time": 30,
+      "ibu": 6,
+      "alpha": 6
+    },
+    {
+      "name": "Chinook",
+      "amount": 27.5,
+      "use": "Boil",
+      "time": 10,
+      "ibu": 16.1,
+      "alpha": 13
+    },
+    {
+      "name": "Ahtanum",
+      "amount": 12.5,
+      "use": "Boil",
+      "time": 10,
+      "ibu": 3.4,
+      "alpha": 6
+    },
+    {
+      "name": "Nelson Sauvin",
+      "amount": 12.5,
+      "use": "Boil",
+      "time": 10,
+      "ibu": 6.8,
+      "alpha": 12
+    },
+    {
+      "name": "Simcoe",
+      "amount": 12.5,
+      "use": "Boil",
+      "time": 10,
+      "ibu": 7.3,
+      "alpha": 13
+    },
+    {
+      "name": "Chinook",
+      "amount": 47.5,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 13
+    },
+    {
+      "name": "Ahtanum",
+      "amount": 37.5,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 6
+    },
+    {
+      "name": "Cascade",
+      "amount": 37.5,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 5.5
+    },
+    {
+      "name": "Simcoe",
+      "amount": 37.5,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 13
+    },
+    {
+      "name": "Nelson Sauvin",
+      "amount": 20,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 12
+    },
+    {
+      "name": "Amarillo",
+      "amount": 10,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 9.2
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "Safale American US 05",
+      "type": "Ale",
+      "amount": 1
+    }
+  ],
+  "miscs": [],
+  "mashTemperature": 66,
+  "mashTime": 75,
+  "mashOutTemperature": 75,
+  "mashOutTime": 10,
+  "fermentation": [
+    {
+      "type": "Primary",
+      "stepTemp": 18,
+      "stepTime": 10
+    }
+  ]
+}

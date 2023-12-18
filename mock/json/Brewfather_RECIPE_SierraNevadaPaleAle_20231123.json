@@ -1,0 +1,805 @@
+{
+  "thumb": "data:image/jpeg;base64,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",
+  "fgEstimated": 1.012,
+  "origin": null,
+  "fermentableIbu": 0,
+  "ibuFormula": "tinseth",
+  "ogPlato": 13.3,
+  "efficiency": 59,
+  "fg": 1.012,
+  "postBoilGravity": 1.053723052,
+  "abv": 5.51,
+  "author": "BYO Magazine",
+  "og": 1.053723052,
+  "_id": "nm6XAENJKqTqe4OAb0T2OS8saPV16q",
+  "styleRbr": true,
+  "_created": {
+    "seconds": 1544360864,
+    "nanoseconds": 271000000
+  },
+  "equipment": {
+    "calcAromaHopUtilization": true,
+    "fermenterVolume": 25,
+    "grainAbsorptionRate": "0.8",
+    "spargeWaterMax": 0,
+    "fermenterLoss": 4,
+    "trubChillerLoss": 2.8,
+    "calcMashEfficiency": true,
+    "mashTunHeatCapacity": 0,
+    "hopstandTemperature": 73,
+    "_created": {
+      "seconds": 1525554181,
+      "nanoseconds": 670000000
+    },
+    "bottlingVolume": 21,
+    "waterCalculation": "Custom",
+    "mashWaterMax": 62,
+    "spargeTemperature": 78,
+    "boilTime": 90,
+    "spargeWaterFormula": "0",
+    "_version": "1.3.2",
+    "_timestamp": {
+      "seconds": 1544339507,
+      "nanoseconds": 614000000
+    },
+    "efficiency": 59,
+    "calcBoilVolume": true,
+    "batchSize": 25,
+    "hopUtilization": 1,
+    "mashTunDeadSpace": 0,
+    "postBoilKettleVol": 28.958333333333336,
+    "mashWaterFormula": "BoilVolumeL + (GrainAbsorptionRate * GrainAmountKg)",
+    "fermenterLossEstimate": 0,
+    "evaporationRate": 0.11441647597254004,
+    "waterGrainRatio": "3",
+    "boilOffPerHr": 4,
+    "aromaHopUtilization": 0.13,
+    "_id": "LRftqrRg0VWp94LUikMhy1mRz4ZlBe",
+    "calcStrikeWaterTemperature": true,
+    "mashWaterVolumeLimitEnabled": false,
+    "efficiencyType": "Fermenter",
+    "boilSize": 34.96,
+    "name": "BB60 NoSparge 25liter",
+    "mashEfficiency": 65.6
+  },
+  "tags": null,
+  "_uid": null,
+  "_type": "recipe",
+  "type": "All Grain",
+  "boilSize": 34.96,
+  "ibu": 39.6,
+  "carbonation": 2.4,
+  "styleOg": true,
+  "styleAbv": true,
+  "styleColor": true,
+  "preBoilGravity": 1.044,
+  "hidden": false,
+  "water": {
+    "sparge": {
+      "sulfate": 4,
+      "alkalinity": 38.5147,
+      "residualAlkalinityMeqLCalc": 0.59224,
+      "ionBalance": -1,
+      "_timestamp": {
+        "seconds": 1543247401,
+        "nanoseconds": 540000000
+      },
+      "hardness": 26,
+      "bicarbonateMeqL": 0.7702897600629344,
+      "type": "source",
+      "_id": "default",
+      "soClRatio": 0.67,
+      "cations": 0.976,
+      "chloride": 6,
+      "magnesium": 0.51,
+      "residualAlkalinity": 31.37902,
+      "ionBalanceOff": false,
+      "name": "SANDEFJORD (Eidsfoss)",
+      "anions": 1.023,
+      "ph": "7.8",
+      "bicarbonate": 47,
+      "sodium": 10.5,
+      "calcium": 9.57,
+      "_created": {
+        "seconds": 1530194165,
+        "nanoseconds": 625000000
+      },
+      "_version": "1.3.1"
+    },
+    "mashAdjustments": {
+      "calciumChloride": 4,
+      "sodium": 0,
+      "volume": 40.68,
+      "chloride": 47.424,
+      "magnesium": 0,
+      "sulfate": 68.547,
+      "bicarbonate": 0,
+      "calciumHydroxide": 0,
+      "sodiumChloride": 0,
+      "acids": [
+        {
+          "type": "lactic",
+          "concentration": 80,
+          "alkalinityMeqL": -1.3503201703791674,
+          "amount": "4"
+        }
+      ],
+      "sodiumBicarbonate": 0,
+      "calciumSulfate": 5,
+      "magnesiumSulfate": 0,
+      "magnesiumChloride": 0,
+      "calcium": 55.418,
+      "calciumCarbonate": 0,
+      "sodiumMetabisulfite": 0,
+      "ltDWB": 0,
+      "ltAMS": 0,
+      "sodiumMetabisulfitePPM": 0
+    },
+    "spargeTargetDiff": null,
+    "spargeWaterAmount": null,
+    "enableSpargeAcidAdjustments": false,
+    "spargeAdjustments": {
+      "volume": 0,
+      "acids": [
+        {
+          "type": "lactic",
+          "concentration": 80,
+          "amount": 0
+        }
+      ],
+      "sodiumMetabisulfitePPM": 0,
+      "calcium": 0,
+      "magnesium": 0,
+      "sodium": 0,
+      "chloride": 0,
+      "sulfate": 0,
+      "bicarbonate": 0
+    },
+    "mashPh": 5.4,
+    "acidPhAdjustment": -0.15752,
+    "settings": {
+      "calciumSulfate": {
+        "mash": true,
+        "sparge": true,
+        "auto": true
+      },
+      "magnesiumSulfate": {
+        "sparge": true,
+        "mash": true,
+        "auto": true
+      },
+      "sodiumBicarbonate": {
+        "auto": false,
+        "mash": true,
+        "sparge": false
+      },
+      "adjustSparge": true,
+      "calciumChloride": {
+        "form": "dihydrate",
+        "sparge": true,
+        "mash": true,
+        "auto": true
+      },
+      "calciumHydroxide": {
+        "sparge": false,
+        "mash": true,
+        "auto": false
+      }
+    },
+    "sourceTargetDiff": null,
+    "mashPhDistilled": 5.61,
+    "enableSpargeAdjustments": false,
+    "mashTargetDiff": null,
+    "totalAdjustments": {
+      "calciumChloride": 4,
+      "sodium": 0,
+      "volume": 40.68,
+      "chloride": 47.424,
+      "magnesium": 0,
+      "sulfate": 68.547,
+      "bicarbonate": 0,
+      "calciumHydroxide": 0,
+      "sodiumChloride": 0,
+      "acids": [
+        {
+          "type": "lactic",
+          "concentration": 80,
+          "alkalinityMeqL": -1.3503201703791674,
+          "amount": "4"
+        }
+      ],
+      "sodiumBicarbonate": 0,
+      "calciumSulfate": 5,
+      "magnesiumSulfate": 0,
+      "magnesiumChloride": 0,
+      "calcium": 55.418,
+      "calciumCarbonate": 0,
+      "sodiumMetabisulfite": 0,
+      "ltDWB": 0,
+      "ltAMS": 0,
+      "sodiumMetabisulfitePPM": 0
+    },
+    "style": "default",
+    "source": {
+      "sulfate": "4",
+      "alkalinity": 38.5147,
+      "residualAlkalinityMeqLCalc": 0.59224,
+      "ionBalance": -1,
+      "_timestamp": {
+        "seconds": 1543247401,
+        "nanoseconds": 540000000
+      },
+      "hardness": 26,
+      "bicarbonateMeqL": 0.7702897600629344,
+      "type": "source",
+      "_id": "default",
+      "soClRatio": 0.67,
+      "cations": 0.976,
+      "chloride": "6",
+      "magnesium": "0.51",
+      "residualAlkalinity": 31.37902,
+      "ionBalanceOff": false,
+      "name": "SANDEFJORD (Eidsfoss)",
+      "anions": 1.023,
+      "ph": "7.8",
+      "bicarbonate": "47",
+      "sodium": "10.5",
+      "calcium": "9.57",
+      "_created": {
+        "seconds": 1530194165,
+        "nanoseconds": 625000000
+      },
+      "_version": "1.3.1"
+    },
+    "spargeAcidPhAdjustment": 0,
+    "mash": {
+      "sulfate": 72.547,
+      "alkalinity": 38.5147,
+      "residualAlkalinityMeqLCalc": -0.39545,
+      "ionBalance": 0,
+      "_timestamp": {
+        "seconds": 1543247401,
+        "nanoseconds": 540000000
+      },
+      "hardness": 164,
+      "bicarbonateMeqL": 0.7702897600629344,
+      "type": "source",
+      "_id": "default",
+      "soClRatio": 1.36,
+      "cations": 3.742,
+      "chloride": 53.424,
+      "magnesium": 0.51,
+      "residualAlkalinity": -8.20606,
+      "ionBalanceOff": false,
+      "name": "SANDEFJORD (Eidsfoss)",
+      "anions": 3.788,
+      "ph": "7.8",
+      "bicarbonate": 47,
+      "sodium": 10.5,
+      "calcium": 64.988,
+      "_created": {
+        "seconds": 1530194165,
+        "nanoseconds": 625000000
+      },
+      "_version": "1.3.1"
+    },
+    "mashWaterAmount": null,
+    "enableAcidAdjustments": true,
+    "total": {
+      "sulfate": 72.547,
+      "alkalinity": 38.5147,
+      "residualAlkalinityMeqLCalc": -0.39545,
+      "ionBalance": 0,
+      "_timestamp": {
+        "seconds": 1543247401,
+        "nanoseconds": 540000000
+      },
+      "hardness": 164,
+      "bicarbonateMeqL": 0.7702897600629344,
+      "type": "source",
+      "_id": "default",
+      "soClRatio": 1.36,
+      "cations": 3.742,
+      "chloride": 53.424,
+      "magnesium": 0.51,
+      "residualAlkalinity": -8.20606,
+      "ionBalanceOff": false,
+      "name": "SANDEFJORD (Eidsfoss)",
+      "anions": 3.788,
+      "ph": "7.8",
+      "bicarbonate": 47,
+      "sodium": 10.5,
+      "calcium": 64.988,
+      "_created": {
+        "seconds": 1530194165,
+        "nanoseconds": 625000000
+      },
+      "_version": "1.3.1"
+    },
+    "totalTargetDiff": null,
+    "diluted": null,
+    "dilutionPercentage": null,
+    "meta": {
+      "equalSourceTotal": false
+    }
+  },
+  "path": "",
+  "_version": "2.9.1",
+  "yeastToleranceExceededBy": null,
+  "fgFormula": "normal",
+  "firstWortGravity": null,
+  "styleCarb": true,
+  "rbRatio": 0.74,
+  "teaser": "",
+  "_origin": "8Clw6xnAugAOEDMP2O1U9qJqnLDb7F",
+  "avgWeightedHopstandTemp": 73,
+  "notes": "CLone recipie from BYO Magazine\n",
+  "yeasts": [
+    {
+      "form": "Liquid",
+      "_created": {
+        "seconds": 1541561739,
+        "nanoseconds": 520000000
+      },
+      "productId": "WLP001",
+      "laboratory": "White Labs",
+      "description": "Famous for its clean flavors, balance, and ability to be used in almost any style of ale. It is extremely versatile and accentuates hop flavors well. A great all-purpose strain and a hardy fermenter.",
+      "fermentsAll": false,
+      "type": "Ale",
+      "starter": true,
+      "amount": 1,
+      "maxAttenuation": 80,
+      "starterSize": 1.1,
+      "maxAbv": 15,
+      "attenuation": 80,
+      "minAttenuation": 73,
+      "minTemp": 20,
+      "starterGramExtract": 108,
+      "_timestamp": {
+        "seconds": 1541561739,
+        "nanoseconds": 520000000
+      },
+      "maxTemp": 22.8,
+      "inventory": 1,
+      "unit": "pkg",
+      "name": "California Ale",
+      "flocculation": "Medium",
+      "_id": "default-1b432e",
+      "_version": "1.2.3"
+    }
+  ],
+  "styleFg": true,
+  "hops": [
+    {
+      "usage": "Bittering",
+      "origin": "US",
+      "_version": "1.3.1",
+      "_created": {
+        "seconds": 1527157249,
+        "nanoseconds": 728000000
+      },
+      "alpha": 12,
+      "ibu": 5.8,
+      "time": 60,
+      "amount": 5,
+      "year": 2017,
+      "_id": "default-66c7ffab",
+      "type": "Pellet",
+      "use": "Boil",
+      "inventory": 26,
+      "name": "Magnum",
+      "_timestamp": {
+        "seconds": 1542804960,
+        "nanoseconds": 408000000
+      },
+      "_editFlag": true,
+      "actualTime": null
+    },
+    {
+      "alpha": 7,
+      "amount": 5,
+      "time": 60,
+      "origin": "US",
+      "_editFlag": true,
+      "usage": "Both",
+      "_id": "default-68c8c832",
+      "ibu": 3.4,
+      "type": "Pellet",
+      "use": "Boil",
+      "name": "Perle",
+      "actualTime": null
+    },
+    {
+      "origin": "US",
+      "ibu": 30.4,
+      "_editFlag": true,
+      "usage": "Both",
+      "_created": {
+        "seconds": 1527157154,
+        "nanoseconds": 945000000
+      },
+      "time": 30,
+      "name": "Cascade",
+      "type": "Pellet",
+      "inventory": 300,
+      "alpha": 5.5,
+      "_timestamp": {
+        "seconds": 1543837972,
+        "nanoseconds": 534000000
+      },
+      "year": 2017,
+      "_id": "default-58d2b845",
+      "_version": "1.3.1",
+      "use": "Boil",
+      "amount": 75,
+      "actualTime": null
+    },
+    {
+      "timeUnit": null,
+      "inventory": 300,
+      "type": "Pellet",
+      "ibu": 0,
+      "_version": "1.3.1",
+      "alpha": 5.5,
+      "usage": "Both",
+      "temp": null,
+      "_id": "default-58d2b845",
+      "_editFlag": true,
+      "time": 0,
+      "_created": {
+        "seconds": 1527157154,
+        "nanoseconds": 945000000
+      },
+      "origin": "US",
+      "amount": 75,
+      "name": "Cascade",
+      "_timestamp": {
+        "seconds": 1543837972,
+        "nanoseconds": 534000000
+      },
+      "use": "Boil",
+      "year": 2017,
+      "actualTime": null
+    }
+  ],
+  "primaryTemp": 20,
+  "styleBuGu": true,
+  "fermentables": [
+    {
+      "origin": "Germany",
+      "percentage": 93.71,
+      "name": "Pale Ale",
+      "supplier": "BestMalz",
+      "type": "Grain",
+      "attenuation": 0.81,
+      "notFermentable": null,
+      "notes": "BEST Pale Ale deepens the light “golden” color of top-fermented beers, creating a pleasant flavor. It forms an excellent enzyme-rich foundation for intensive colored beer styles. It is an excellent base malt for brewing many different styles of British Pale Ale as well as for brewing Kölsch beer.",
+      "potential": 1.038088,
+      "grainCategory": "Base",
+      "_created": {
+        "seconds": 1543838127,
+        "nanoseconds": 185000000
+      },
+      "_version": "1.3.1",
+      "_timestamp": {
+        "seconds": 1543838127,
+        "nanoseconds": 185000000
+      },
+      "_id": "default-592f3ac",
+      "color": 3.0456853,
+      "inventory": 25,
+      "amount": 6.7,
+      "potentialPercentage": 82.8
+    },
+    {
+      "supplier": "Weyermann",
+      "amount": 0.45,
+      "percentage": 6.29,
+      "_id": "default-f2ae88f",
+      "notFermentable": null,
+      "potential": 1.0368322,
+      "type": "Grain",
+      "notes": "",
+      "grainCategory": "Crystal/Caramel",
+      "attenuation": null,
+      "color": 71,
+      "origin": "Germany",
+      "name": "Caramunich III",
+      "potentialPercentage": 80.07
+    }
+  ],
+  "mashEfficiency": 65.6,
+  "name": "Sierra Nevada Pale Ale",
+  "sumDryHopPerLiter": 0,
+  "boilTime": 90,
+  "color": 9.9,
+  "_timestamp": "2023-11-23T22:40:45.578Z",
+  "searchTags": [
+    "Added",
+    "BYO",
+    "clone",
+    "Sierra",
+    "nevada"
+  ],
+  "_timestamp_ms": 1700779245578,
+  "hopsTotalAmount": 160,
+  "_share": null,
+  "hopStandMinutes": 0,
+  "styleIbu": true,
+  "styleConformity": true,
+  "carbonationStyle": {
+    "carbMin": 2.3,
+    "carbMax": 2.8,
+    "name": "Amerikansk Pale Ale"
+  },
+  "fermentation": {
+    "_id": "default",
+    "steps": [
+      {
+        "stepTime": 14,
+        "type": "Primary",
+        "stepTemp": 20
+      }
+    ],
+    "name": "Ale"
+  },
+  "buGuRatio": 0.74,
+  "data": {
+    "mashFermentablesAmount": 7.15,
+    "allDiastaticPower": false,
+    "totalDiastaticPower": 0,
+    "mashFermentables": [
+      {
+        "origin": "Germany",
+        "percentage": 93.71,
+        "name": "Pale Ale",
+        "supplier": "BestMalz",
+        "type": "Grain",
+        "attenuation": 0.81,
+        "notFermentable": null,
+        "notes": "BEST Pale Ale deepens the light “golden” color of top-fermented beers, creating a pleasant flavor. It forms an excellent enzyme-rich foundation for intensive colored beer styles. It is an excellent base malt for brewing many different styles of British Pale Ale as well as for brewing Kölsch beer.",
+        "potential": 1.038088,
+        "grainCategory": "Base",
+        "_created": {
+          "seconds": 1543838127,
+          "nanoseconds": 185000000
+        },
+        "_version": "1.3.1",
+        "_timestamp": {
+          "seconds": 1543838127,
+          "nanoseconds": 185000000
+        },
+        "_id": "default-592f3ac",
+        "color": 3.0456853,
+        "inventory": 25,
+        "amount": 6.7,
+        "potentialPercentage": 82.8
+      },
+      {
+        "supplier": "Weyermann",
+        "amount": 0.45,
+        "percentage": 6.29,
+        "_id": "default-f2ae88f",
+        "notFermentable": null,
+        "potential": 1.0368322,
+        "type": "Grain",
+        "notes": "",
+        "grainCategory": "Crystal/Caramel",
+        "attenuation": null,
+        "color": 71,
+        "origin": "Germany",
+        "name": "Caramunich III",
+        "potentialPercentage": 80.07
+      }
+    ],
+    "otherFermentablesAmount": 0,
+    "otherFermentables": [],
+    "mashWaterAmount": 40.68,
+    "spargeWaterAmount": 0,
+    "mashVolumeSurplus": 0,
+    "topUpWater": 0,
+    "batchSpargeWaterAmount1": null,
+    "batchSpargeWaterAmount2": null,
+    "batchSpargeWaterAmount3": null,
+    "batchSpargeWaterAmount4": null,
+    "hltWaterAmount": 0,
+    "totalWaterAmount": 40.68,
+    "hopsAmount": 160,
+    "strikeTemp": 71.4,
+    "mashVolume": 45.4705
+  },
+  "batchSize": 25,
+  "fermentablesTotalAmount": 7.15,
+  "attenuation": 0.77,
+  "mash": {
+    "name": "High fermentability",
+    "steps": [
+      {
+        "rampTime": null,
+        "stepTemp": 68,
+        "name": "",
+        "displayStepTemp": "68",
+        "stepTime": 60,
+        "type": "Temperature"
+      },
+      {
+        "stepTemp": 76,
+        "name": "Mash out",
+        "rampTime": null,
+        "displayStepTemp": "76",
+        "stepTime": 5,
+        "type": "Temperature"
+      }
+    ],
+    "_id": "default"
+  },
+  "_public": false,
+  "img": "users/KdOykUUNPuZfWoIwSpSmLCgD2I03/images/recipes/8Clw6xnAugAOEDMP2O1U9qJqnLDb7F/8Clw6xnAugAOEDMP2O1U9qJqnLDb7F.jpeg",
+  "miscs": [
+    {
+      "unit": "g",
+      "_created": {
+        "seconds": 1525600410,
+        "nanoseconds": 633000000
+      },
+      "name": "Calcium Chloride",
+      "use": "Mash",
+      "_timestamp": {
+        "seconds": 1543149137,
+        "nanoseconds": 637000000
+      },
+      "time": null,
+      "timeIsDays": false,
+      "type": "Water Agent",
+      "_id": "default-3b1827",
+      "amount": 4,
+      "inventory": 173.5,
+      "waterAdjustment": true,
+      "_version": "1.3.1"
+    },
+    {
+      "_id": "default-1f88df",
+      "inventory": 169.5,
+      "name": "Gypsum (Calcium Sulfate)",
+      "_version": "1.3.1",
+      "time": null,
+      "type": "Water Agent",
+      "_timestamp": {
+        "seconds": 1543149136,
+        "nanoseconds": 886000000
+      },
+      "use": "Mash",
+      "unit": "g",
+      "_created": {
+        "seconds": 1525600387,
+        "nanoseconds": 757000000
+      },
+      "waterAdjustment": true,
+      "timeIsDays": false,
+      "amount": 5
+    },
+    {
+      "concentration": 80,
+      "inventory": 33,
+      "timeIsDays": false,
+      "unit": "ml",
+      "_version": "1.3.1",
+      "amount": 4,
+      "_timestamp": {
+        "seconds": 1543149138,
+        "nanoseconds": 283000000
+      },
+      "type": "Water Agent",
+      "_created": {
+        "seconds": 1525600371,
+        "nanoseconds": 556000000
+      },
+      "time": null,
+      "waterAdjustment": true,
+      "use": "Mash",
+      "name": "Lactic Acid",
+      "_id": "default-07adb1"
+    },
+    {
+      "timeIsDays": false,
+      "_timestamp": {
+        "seconds": 1543143641,
+        "nanoseconds": 468000000
+      },
+      "_id": "default-yn1j28sf",
+      "inventory": 4,
+      "name": "Yeast Nutrients",
+      "amount": 1,
+      "unit": "g",
+      "_created": {
+        "seconds": 1543143641,
+        "nanoseconds": 469000000
+      },
+      "type": "Other",
+      "time": 15,
+      "_version": "1.3.1",
+      "use": "Boil"
+    },
+    {
+      "amount": 0.5,
+      "_version": "1.3.1",
+      "time": 5,
+      "type": "Fining",
+      "_timestamp": {
+        "seconds": 1543143644,
+        "nanoseconds": 949000000
+      },
+      "_id": "default-8mv12",
+      "timeIsDays": false,
+      "use": "Boil",
+      "inventory": 18.5,
+      "name": "Whirlfloc",
+      "_created": {
+        "seconds": 1525600269,
+        "nanoseconds": 358000000
+      },
+      "unit": "items"
+    }
+  ],
+  "style": {
+    "type": "Ale",
+    "buGuMax": 0.8,
+    "carbonationStyle": "_",
+    "abvMax": 5.9,
+    "buGuMin": 0.4,
+    "ogMax": 1.056,
+    "carbMax": 2.8,
+    "rbrMax": 0.79,
+    "category": "Lys Ale",
+    "fgMax": 1.016,
+    "lovibondMin": 6.1,
+    "categoryNumber": "04",
+    "styleGuide": "Norbrygg 2017",
+    "lovibondMax": 14.2,
+    "styleLetter": "E",
+    "rbrMin": 0.39,
+    "_id": "default-norbrygg-04E",
+    "carbMin": 2.3,
+    "ibuMax": 40,
+    "colorMin": 6.1,
+    "abvMin": 4.4,
+    "ogMin": 1.044,
+    "ibuMin": 20,
+    "fgMin": 1.008,
+    "name": "Amerikansk Pale Ale",
+    "colorMax": 14.2
+  },
+  "_init": true,
+  "_ev": 1.1,
+  "extraGravity": 0,
+  "totalGravity": 1.053723052,
+  "nutrition": {
+    "calories": {
+      "alcohol": 31.031995960853482,
+      "carbs": 19.379672449487824,
+      "total": 50.41166841034129,
+      "kJ": 210.92242062886797
+    },
+    "carbs": {
+      "total": 4.8725518842434425
+    }
+  },
+  "diastaticPower": 0,
+  "sumAromaHopPerLiter": 0,
+  "defaults": {
+    "preferred": "metric",
+    "abv": "simple",
+    "attenuation": "normal",
+    "color": "ebc",
+    "grainColor": "default",
+    "gravity": "sg",
+    "ibu": "tinseth",
+    "temp": "c",
+    "volume": "l",
+    "weight": "kg",
+    "hop": "g",
+    "pressure": "bar",
+    "carbonation": "vol",
+    "altitude": "m"
+  }
+}

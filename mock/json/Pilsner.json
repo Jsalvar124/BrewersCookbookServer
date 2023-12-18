@@ -1,0 +1,106 @@
+{
+  "name": "Pilsner",
+  "author": "JHB",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2FPM2x08EWeqZe3HRixmfqIWmrKbr2%2Fimages%2Frecipes%2FKVD4XsJfunz9urLjoRD4HZZz76Q02N%2FKVD4XsJfunz9urLjoRD4HZZz76Q02N.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 4.99,
+  "originalGravity": 1.052252939,
+  "finalGravity": 1.014,
+  "ibu": 40,
+  "colorSRM": 4.4,
+  "batchSize": 21,
+  "mashWaterAmount": 21.6,
+  "spargeWaterAmount": 9.08,
+  "boilTime": 60,
+  "style": {
+    "rbrMin": 0.54,
+    "abvMax": 5.8,
+    "ogMin": 1.044,
+    "ogMax": 1.06,
+    "abvMin": 4.2,
+    "colorMax": 6,
+    "_id": "default-9",
+    "categoryNumber": "03",
+    "fgMax": 1.017,
+    "ibuMax": 45,
+    "buGuMax": 0.87,
+    "fgMin": 1.013,
+    "name": "Czech Premium Pale Lager",
+    "rbrMax": 0.82,
+    "carbonationStyle": "03B",
+    "colorMin": 3.5,
+    "ibuMin": 30,
+    "lovibondMin": 3.5,
+    "type": "Pilsner",
+    "lovibondMax": 6,
+    "styleLetter": "B",
+    "styleGuide": "BJCP 2015",
+    "buGuMin": 0.58,
+    "category": "Czech Lager"
+  },
+  "notes": "Simple Pilsner recipe - malt, spice all things nice",
+  "fermentables": [
+    {
+      "name": "Floor-Malted Bohemian Pilsner",
+      "potential": 1.035,
+      "amount": 4.4,
+      "color": 1.269036
+    },
+    {
+      "name": "Carahell",
+      "potential": 1.035,
+      "amount": 0.6,
+      "color": 13
+    }
+  ],
+  "hops": [
+    {
+      "name": "Saaz",
+      "amount": 46.5,
+      "use": "First Wort",
+      "time": 60,
+      "ibu": 20.5,
+      "alpha": 3.5
+    },
+    {
+      "name": "Saaz",
+      "amount": 40,
+      "use": "Boil",
+      "time": 30,
+      "ibu": 12.8,
+      "alpha": 3.5
+    },
+    {
+      "name": "Saaz",
+      "amount": 30,
+      "use": "Boil",
+      "time": 10,
+      "ibu": 5.3,
+      "alpha": 3.5
+    },
+    {
+      "name": "Saaz",
+      "amount": 30,
+      "use": "Boil",
+      "time": 0,
+      "ibu": 1.4,
+      "alpha": 3.5
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "Czech Budejovice Lager",
+      "type": "Lager",
+      "amount": 1
+    }
+  ],
+  "miscs": [],
+  "mashTemperature": 50,
+  "mashTime": 15,
+  "mashOutTemperature": 70,
+  "mashOutTime": 60,
+  "primaryFermentationTemperature": 12,
+  "primaryFermentationTime": 14,
+  "seccondaryFermentationTemperature": 20,
+  "seccondaryFermentationTime": 4
+}

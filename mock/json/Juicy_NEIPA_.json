@@ -1,0 +1,138 @@
+{
+  "name": "Juicy NEIPA ",
+  "author": "Papebrew",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2FodT35jDyMZZIGxtnRHqPh8iJLD83%2Fimages%2Frecipes%2FM3WeK8cbByo5366I8zFP53GUt5eTpa%2FM3WeK8cbByo5366I8zFP53GUt5eTpa.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 4.46,
+  "originalGravity": 1.045032542,
+  "finalGravity": 1.011,
+  "ibu": 140.1,
+  "colorSRM": 3.9,
+  "batchSize": 23,
+  "mashWaterAmount": 20.5,
+  "spargeWaterAmount": 12.1,
+  "boilTime": 60,
+  "style": {
+    "ogMin": 1.06,
+    "fgMin": 1.01,
+    "rbrMin": 0.36,
+    "categoryNumber": "21",
+    "rbrMax": 0.87,
+    "colorMin": 3,
+    "fgMax": 1.015,
+    "ibuMin": 25,
+    "type": "IPA",
+    "styleLetter": "B",
+    "name": "Specialty IPA - New England IPA",
+    "category": "IPA",
+    "styleGuide": "BJCP Provisional",
+    "colorMax": 7,
+    "carbMin": null,
+    "ogMax": 1.085,
+    "abvMax": 9,
+    "_id": "default-bjcp-neipa",
+    "lovibondMin": 3,
+    "buGuMin": 0.34,
+    "ibuMax": 60,
+    "lovibondMax": 7,
+    "abvMin": 6,
+    "carbonationStyle": "NEIPA",
+    "carbMax": null,
+    "buGuMax": 0.83
+  },
+  "notes": "A very succeeded neipa. one problem: the batch was too small!!",
+  "fermentables": [
+    {
+      "name": "Pale Malt Maris Otter",
+      "potential": 1.03795,
+      "amount": 3,
+      "color": 2.5888325
+    },
+    {
+      "name": "Oats, Flaked",
+      "potential": 1.0368,
+      "amount": 1,
+      "color": 1
+    },
+    {
+      "name": "Wheat",
+      "potential": 1.039,
+      "amount": 1,
+      "color": 3.045685
+    }
+  ],
+  "hops": [
+    {
+      "name": "Chinook",
+      "amount": 20,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 27.3,
+      "alpha": 11
+    },
+    {
+      "name": "Citra",
+      "amount": 20,
+      "use": "Boil",
+      "time": 5,
+      "ibu": 22.1,
+      "alpha": 12
+    },
+    {
+      "name": "Nelson Sauvin",
+      "amount": 50,
+      "use": "Aroma",
+      "time": 30,
+      "ibu": 50.4,
+      "alpha": 12
+    },
+    {
+      "name": "Citra",
+      "amount": 40,
+      "use": "Aroma",
+      "time": 30,
+      "ibu": 40.3,
+      "alpha": 12
+    },
+    {
+      "name": "Chinook",
+      "amount": 80,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 11
+    },
+    {
+      "name": "Nelson Sauvin",
+      "amount": 50,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 12
+    },
+    {
+      "name": "Citra",
+      "amount": 40,
+      "use": "Dry Hop",
+      "time": 4,
+      "ibu": 0,
+      "alpha": 12
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "DIPA Ale",
+      "type": "Ale",
+      "amount": 1
+    }
+  ],
+  "miscs": [],
+  "mashTemperature": 66,
+  "mashTime": 60,
+  "mashOutTemperature": null,
+  "mashOutTime": null,
+  "primaryFermentationTemperature": 20,
+  "primaryFermentationTime": 14,
+  "seccondaryFermentationTemperature": null,
+  "seccondaryFermentationTime": null
+}

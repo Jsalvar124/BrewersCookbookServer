@@ -1,0 +1,142 @@
+{
+  "name": "Lefte",
+  "author": "Apocryphy",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2FfVzPe5GE4CfZYk9FMGzSIi7cJDz2%2Fimages%2Frecipes%2FhuW7jshLWRAIz1N5VaJCkA6PQvyC8A%2FhuW7jshLWRAIz1N5VaJCkA6PQvyC8A.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 7.09,
+  "originalGravity": 1.063986949,
+  "finalGravity": 1.01,
+  "ibu": 10,
+  "colorSRM": 6.7,
+  "batchSize": 23,
+  "mashWaterAmount": 19.61,
+  "spargeWaterAmount": 12.08,
+  "boilTime": 60,
+  "style": {
+    "fgMin": 1.008,
+    "categoryNumber": "25",
+    "styleGuide": "BJCP 2015",
+    "abvMin": 6,
+    "colorMax": 7,
+    "fgMax": 1.018,
+    "buGuMin": 0.22,
+    "ibuMin": 15,
+    "name": "Belgian Blond Ale",
+    "buGuMax": 0.44,
+    "lovibondMax": 7,
+    "abvMax": 7.5,
+    "carbonationStyle": "25A",
+    "carbMin": null,
+    "category": "Strong Belgian Ale",
+    "type": "Pale Ale",
+    "lovibondMin": 4,
+    "_id": "default-85",
+    "styleLetter": "A",
+    "colorMin": 4,
+    "rbrMax": 0.46,
+    "rbrMin": 0.23,
+    "ibuMax": 30,
+    "ogMax": 1.075,
+    "carbMax": null,
+    "ogMin": 1.062
+  },
+  "notes": "A nice example of a popular Belgian Blonde\n",
+  "fermentables": [
+    {
+      "name": "Pale Malt, Ale",
+      "potential": 1.03795,
+      "amount": 5.3,
+      "color": 3
+    },
+    {
+      "name": "Candi Sugar, Clear",
+      "potential": 1.036018,
+      "amount": 0.5,
+      "color": 0.5
+    },
+    {
+      "name": "Munich, Light",
+      "potential": 1.038042,
+      "amount": 0.5,
+      "color": 9
+    },
+    {
+      "name": "Biscuit Malt",
+      "potential": 1.03496,
+      "amount": 0.1,
+      "color": 30.4568528
+    },
+    {
+      "name": "Melanoidin",
+      "potential": 1.0368322,
+      "amount": 0.1,
+      "color": 30
+    }
+  ],
+  "hops": [
+    {
+      "name": "East Kent Goldings (EKG)",
+      "amount": 15,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 7.3,
+      "alpha": 5
+    },
+    {
+      "name": "Saaz",
+      "amount": 20,
+      "use": "Boil",
+      "time": 10,
+      "ibu": 2.7,
+      "alpha": 3.75
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "Belgian Tripel",
+      "type": "Ale",
+      "amount": 0
+    }
+  ],
+  "miscs": [
+    {
+      "name": "Coriander Seed",
+      "type": "Spice",
+      "amount": 20,
+      "unit": "g"
+    },
+    {
+      "name": "Orange Peel, Bitter",
+      "type": "Spice",
+      "amount": 30,
+      "unit": "g"
+    },
+    {
+      "name": "Orange Peel, Sweet",
+      "type": "Spice",
+      "amount": 30,
+      "unit": "g"
+    }
+  ],
+  "mashTemperature": 68,
+  "mashTime": 60,
+  "mashOutTemperature": 76,
+  "mashOutTime": 10,
+  "fermentation": [
+    {
+      "type": "Primary",
+      "stepTemp": 18,
+      "stepTime": 7
+    },
+    {
+      "type": "Secondary",
+      "stepTemp": 23,
+      "stepTime": 3
+    },
+    {
+      "type": "Cold Crash",
+      "stepTemp": 3,
+      "stepTime": 3
+    }
+  ]
+}

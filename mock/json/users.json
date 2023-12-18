@@ -1,0 +1,39 @@
+[
+    {
+      "usuario": "Juan Perez",
+      "email": "juan.perez@example.com",
+      "password": "password123",
+      "confirmpass": "password123"
+    },
+    {
+      "usuario": "Maria Rodriguez",
+      "email": "maria.rodriguez@example.com",
+      "password": "securepass456",
+      "confirmpass": "securepass456"
+    },
+    {
+      "usuario": "Carlos Lopez",
+      "email": "carlos.lopez@example.com",
+      "password": "secretword789",
+      "confirmpass": "secretword789"
+    },
+    {
+      "usuario": "Ana Garcia",
+      "email": "ana.garcia@example.com",
+      "password": "mypassword1",
+      "confirmpass": "mypassword1"
+    },
+    {
+      "usuario": "Javier Martinez",
+      "email": "javier.martinez@example.com",
+      "password": "newpass2023",
+      "confirmpass": "newpass2023"
+    },
+    {
+      "usuario": "Laura Sanchez",
+      "email": "laura.sanchez@example.com",
+      "password": "securepass321",
+      "confirmpass": "securepass321"
+    }
+  ]
+  
