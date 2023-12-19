@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize')
 
 module.exports = (dataBase) => {
-  const favoritos = dataBase.define('Favoritos', {
+  const Favoritos = dataBase.define('Favoritos', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -11,5 +11,5 @@ module.exports = (dataBase) => {
   },
   { timestamps: false })
 
-  return favoritos
+  return Favoritos
 }

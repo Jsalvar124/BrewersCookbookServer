@@ -97,6 +97,7 @@ module.exports = {
   Estilos,
   Recetas,
   User,
+  Favoritos,
   connectDB,
   conn: dataBase
 }

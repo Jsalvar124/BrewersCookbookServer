@@ -76,6 +76,32 @@ const UserControllers = {
       console.error(error)
       res.status(500).json({ message: error.message })
     }
+  },
+  addFavorite: async (req, res) => {
+    try {
+      const { id, recetaId } = req.params
+      const result = await UserServices.addFavorite(id, recetaId)
+      res.status(201).json({
+        message: 'Favorite created Succesfully',
+        result
+      })
+    } catch (error) {
+      console.error(error)
+      res.status(500).json({ message: error.message })
+    }
+  },
+  deleteFavorite: async (req, res) => {
+    try {
+      const { id, recetaId } = req.params
+      const result = await UserServices.deleteFavorite(id, recetaId)
+      res.status(200).json({
+        message: 'Favorite deleted Succesfully',
+        result
+      })
+    } catch (error) {
+      console.error(error)
+      res.status(500).json({ message: error.message })
+    }
   }
 }
 

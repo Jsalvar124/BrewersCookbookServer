@@ -1,31 +1,31 @@
 const RecetasService = require('../Services/serviceRecetas')
 
 const RecetasController = {
-  getAllRecepies: async (req, res) => {
+  getAllRecetas: async (req, res) => {
     try {
-      const recepies = await RecetasService.getAllRecepies()
+      const recepies = await RecetasService.getAllRecetas()
       res.json(recepies)
     } catch (error) {
       console.error(error)
       res.status(500).send('Internal Server Error')
     }
   },
-  getRecepieById: async (req, res) => {
+  getRecetaById: async (req, res) => {
     const { id } = req.params
     try {
-      const recepie = await RecetasService.getRecetaById(id)
-      res.status(200).json(recepie)
+      const recipe = await RecetasService.getRecetaById(id)
+      res.status(200).json(recipe)
     } catch (error) {
       res.status(500).send({ message: error.message })
     }
   },
-  createNewRecepie: async (req, res) => {
-    const recepieData = req.body
+  createNewReceta: async (req, res) => {
+    const recipeData = req.body
     try {
-      const newRecepie = await RecetasService.createNewRecepie(recepieData)
+      const newRecipe = await RecetasService.createNewReceta(recipeData)
       res.status(201).json({
-        message: 'Recepie created sucessfully',
-        newRecepie
+        message: 'Recipe created sucessfully',
+        newRecipe
       })
     } catch (error) {
       res.status(500).send({ message: error.message })

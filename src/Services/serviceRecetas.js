@@ -1,20 +1,19 @@
 const { Recetas } = require('../db')
 const { Op } = require('sequelize')
-const { all } = require('../routes/routeIngredientes')
 
 const RectasServices = {
 
-  getAllRecepies: async () => {
+  getAllRecetas: async () => {
     try {
       const recetas = await Recetas.findAll()
 
       if (recetas.length === 0) {
-        return 'There are not recepies in the Data Base'
+        return 'There are not recipes in the Data Base'
       }
       return recetas
     } catch (error) {
       console.error(error)
-      throw new Error('Error fetching recepies')
+      throw new Error('Error fetching recipes')
     }
   },
   getRecetaById: async (id) => {
@@ -22,35 +21,35 @@ const RectasServices = {
       const response = await Recetas.findByPk(id, { include: { all: true, nested: true } })
 
       if (!response) {
-        return 'Cannot find the Recepie ID'
+        return 'Cannot find the Recipe ID'
       }
       return response
     } catch (error) {
       console.error(error)
-      throw new Error('Error fetching recepies')
+      throw new Error('Error fetching recipes')
     }
   },
-  updateRecepie: async (id, updateData) => {
+  updateReceta: async (id, updateData) => {
     try {
       const receta = await Recetas.findByPk(id)
 
       if (!receta) {
-        throw new Error(`Cannot update recepie with id: ${id} `)
+        throw new Error(`Cannot update recipe with id: ${id} `)
       }
 
-      const updatedRecepie = await Recetas.update(updateData)
+      const updatedRecipe = await Recetas.update(updateData)
 
-      return updatedRecepie
+      return updatedRecipe
     } catch (error) {
       console.error(error)
-      throw new Error('Error fetching recepie')
+      throw new Error('Error fetching recipe')
     }
   },
-  deleteRecepie: async (id) => {
+  deleteReceta: async (id) => {
     try {
       const response = await Recetas.findByPk(id)
       if (!response) {
-        throw new Error('Recepie not found')
+        throw new Error('Recipe not found')
       }
       await response.update({ isActive: false })
 
@@ -60,10 +59,10 @@ const RectasServices = {
       throw new Error('Error fetching recepie')
     }
   },
-  createNewRecepie: async (recepieData) => {
+  createNewReceta: async (recipeData) => {
     try {
-      if (!recepieData) {
-        return 'Recepie information invalid'
+      if (!recipeData) {
+        return 'Recipe information invalid'
       }
       const {
         name,
@@ -91,9 +90,9 @@ const RectasServices = {
         notes,
         EstiloId,
         UserId
-      } = recepieData
+      } = recipeData
 
-      const newRecepie = await Recetas.create({
+      const newRecipe = await Recetas.create({
         name,
         author,
         image,
@@ -120,12 +119,12 @@ const RectasServices = {
         EstiloId,
         UserId
       })
-      if (newRecepie) {
-        return 'User Created Successfully'
+      if (newRecipe) {
+        return 'Recipe Created Successfully'
       }
     } catch (error) {
       console.error(error)
-      throw new Error('Error fetching Recepie')
+      throw new Error('Error fetching Recipe')
     }
   }
 }
