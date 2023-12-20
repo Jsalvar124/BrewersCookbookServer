@@ -1,0 +1,93 @@
+{
+  "name": "Guiness Clone",
+  "author": "Bruce Itterman Take based on BYO article",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2F8VMuE1RXkbaIE8yzZ2kHAa0Ekmr2%2Fimages%2Frecipes%2F8kszgVBkoRehrtSGn5XGGzu1trixzG%2F8kszgVBkoRehrtSGn5XGGzu1trixzG.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 4.33,
+  "originalGravity": 1.044557092,
+  "finalGravity": 1.012,
+  "ibu": 39.9,
+  "colorSRM": 36.6,
+  "batchSize": 23,
+  "mashWaterAmount": 13.29,
+  "spargeWaterAmount": 14.75,
+  "boilTime": 60,
+  "style": {
+    "fgMin": 1.007,
+    "type": "Stout",
+    "styleGuide": "BJCP 2015",
+    "buGuMax": 1.12,
+    "category": "Irish Beer",
+    "rbrMin": 0.62,
+    "buGuMin": 0.62,
+    "fgMax": 1.011,
+    "_id": "default-47",
+    "abvMin": 4,
+    "styleLetter": "B",
+    "lovibondMin": 25,
+    "carbMax": null,
+    "ogMin": 1.036,
+    "colorMax": 40,
+    "abvMax": 4.5,
+    "colorMin": 25,
+    "name": "Irish Stout",
+    "lovibondMax": 40,
+    "categoryNumber": "15",
+    "ibuMax": 45,
+    "carbMin": null,
+    "rbrMax": 1.12,
+    "ibuMin": 25,
+    "carbonationStyle": "15B",
+    "ogMax": 1.044
+  },
+  "notes": "https://web.archive.org/web/20130120122623/byo.com/stories/beer-styles/article/indices/11-beer-styles/1458-stout-hearted-in-ireland\n\n\nMashing\nMcGovern notes that unlike those in corn and rice, the starches in raw barley do not have to be gelatinized before mashing. So no cooking is required. The enzymatic action of pale malt is strong enough to convert the starch into the sugars required for fermentation. So you won’t find any cereal cookers at the Guinness plant.\n\nGuinness’ new brew house is laid out in the traditional, top to bottom design. Though the grains are not milled on the top floor, they are sent there by conveyor for storage in the huge grist bins. To mash a batch of Guinness, you’ll need 22 tons of grist (48,501 lb.) of around 65 percent pale malt, 25 percent raw barley, and 10 percent roast. Add that to 50 tons of water (13,233 gallons) in the mash tun, where huge, automatic paddles and knives rotate through the mash to keep it loose and well-mixed.\n\nThe water comes from Ireland’s Wicklow mountains. It’s relatively soft, but with the right blend of minerals for a successful mash. It’s the same water that Arthur Guinness used to make stout back in the 18th century.\n\nThe mash rests at 57° C (135° F) for 75 minutes, then it is stepped up to 67° C (152.6° F) and held for 45 minutes, then mashed out at 78° C (172° F).\n\nThe mash is fully converted in just over two hours, but the whole process takes about three. After mash-out it is automatically transferred to the kieve (pronounced “keev”).\n\n“Kieve is a term unique to Ireland,” McGovern says. “Most breweries call this vessel the lauter tun, where the mash is strained and rinsed over a false bottom to extract the sweet wort for fermentation.” The word is derived from the French word for copper, cuivre, pronounced “kweev.” McGovern says the Irish just like to be different.\n\n\nFor souring you can do multiple ways:\n1) Naturally sour part of the beer\n2) Add lactic acid at kegging time.\n3) Replace some the base malt with acid malt. \n\nI choose 2 as I can dose to my taste.\n",
+  "fermentables": [
+    {
+      "name": "Pale Malt, Maris Otter",
+      "potential": 1.03795,
+      "amount": 2.88,
+      "color": 3
+    },
+    {
+      "name": "Barley, Flaked",
+      "potential": 1.035006,
+      "amount": 1.107,
+      "color": 2
+    },
+    {
+      "name": "Roasted Barley",
+      "potential": 1.03404,
+      "amount": 0.443,
+      "color": 609
+    }
+  ],
+  "hops": [
+    {
+      "name": "East Kent Goldings (EKG)",
+      "amount": 69,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 39.9,
+      "alpha": 4.7
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "Irish Ale",
+      "type": "Ale",
+      "amount": 1
+    }
+  ],
+  "miscs": [],
+  "mashTemperature": 65,
+  "mashTime": 90,
+  "mashOutTemperature": 74,
+  "mashOutTime": 10,
+  "fermentation": [
+    {
+      "type": "Primary",
+      "stepTemp": 19,
+      "stepTime": 14
+    }
+  ]
+}

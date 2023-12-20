@@ -1,0 +1,124 @@
+{
+  "name": "Chocolate Coffee Stout",
+  "author": "Short Circuited Brewers",
+  "image": "https://firebasestorage.googleapis.com/v0/b/brewfather-app.appspot.com/o/users%2F9FonQZllBufUcjq2w25kIiC3Jp53%2Fimages%2Frecipes%2FKmxwnZRzY035fir6JsPusshoOPvBHe%2FKmxwnZRzY035fir6JsPusshoOPvBHe.jpeg?alt=media&token=6b76e620-2001-49cc-876b-252e0d6e5da1",
+  "type": "All Grain",
+  "alcoholByVolume": 6.04,
+  "originalGravity": 1.061127986,
+  "finalGravity": 1.015,
+  "ibu": 36.9,
+  "colorSRM": 34.7,
+  "batchSize": 41.63953,
+  "mashWaterAmount": 33.29,
+  "spargeWaterAmount": 26.44,
+  "boilTime": 60,
+  "style": {
+    "colorMax": 40,
+    "ibuMin": 35,
+    "lovibondMin": 30,
+    "category": "American Porter and Stout",
+    "styleGuide": "BJCP 2015",
+    "buGuMax": 1.2,
+    "colorMin": 30,
+    "abvMin": 5,
+    "rbrMin": 0.54,
+    "_id": "default-63",
+    "carbonationStyle": "20B",
+    "name": "American Stout",
+    "type": "Stout",
+    "rbrMax": 1.16,
+    "ogMax": 1.075,
+    "fgMin": 1.01,
+    "lovibondMax": 40,
+    "fgMax": 1.022,
+    "categoryNumber": "20",
+    "ogMin": 1.05,
+    "styleLetter": "B",
+    "ibuMax": 75,
+    "buGuMin": 0.56,
+    "abvMax": 7
+  },
+  "notes": "Be sure to adjust for your equipment.  Check out the video on our tasting this batch",
+  "fermentables": [
+    {
+      "name": "Pale Ale Malt 2-Row",
+      "potential": 1.0368,
+      "amount": 9.071847,
+      "color": 3.5
+    },
+    {
+      "name": "Carapils",
+      "potential": 1.03358,
+      "amount": 0.907185,
+      "color": 1.5
+    },
+    {
+      "name": "Chocolate",
+      "potential": 1.035,
+      "amount": 0.680389,
+      "color": 350
+    },
+    {
+      "name": "Barley, Flaked",
+      "potential": 1.035,
+      "amount": 0.453592,
+      "color": 1.7
+    },
+    {
+      "name": "Caramel/Crystal Malt",
+      "potential": 1.0345,
+      "amount": 0.453592,
+      "color": 128
+    },
+    {
+      "name": "Roasted Barley",
+      "potential": 1.0322,
+      "amount": 0.453592,
+      "color": 383
+    }
+  ],
+  "hops": [
+    {
+      "name": "Cascade",
+      "amount": 56.699046,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 19.2,
+      "alpha": 6.3
+    },
+    {
+      "name": "Chinook",
+      "amount": 28.349523,
+      "use": "Boil",
+      "time": 60,
+      "ibu": 17.7,
+      "alpha": 11.6
+    }
+  ],
+  "yeasts": [
+    {
+      "name": "SafAle English Ale",
+      "type": "Ale",
+      "amount": 2
+    }
+  ],
+  "miscs": [
+    {
+      "name": "Coffee",
+      "type": "Flavor",
+      "amount": 48,
+      "unit": "oz"
+    }
+  ],
+  "mashTemperature": 65,
+  "mashTime": 60,
+  "mashOutTemperature": 75,
+  "mashOutTime": 10,
+  "fermentation": [
+    {
+      "type": "Primary",
+      "stepTemp": 18.333333,
+      "stepTime": 14
+    }
+  ]
+}
