@@ -1,6 +1,4 @@
 const { Recetas } = require('../db')
-const { Op } = require('sequelize')
-const { all } = require('../routes/routeIngredientes')
 const cloudinary = require('cloudinary').v2
 const multer = require('multer')
 const upload = multer({ dest: 'uploads' })
