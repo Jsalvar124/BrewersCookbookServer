@@ -41,7 +41,8 @@ const verifyLocalPassword = async (email, password) => {
     throw new Error('Contraseña incorrecta')
   }
 
-  return user.dataValues
+  const userData = {...user.dataValues, id: user.id}
+  return userData.dataValues;
 }
 
 const generateSessionToken = (user) => {
