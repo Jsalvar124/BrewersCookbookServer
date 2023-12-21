@@ -4,6 +4,7 @@ const { all } = require('../routes/routeIngredientes')
 const cloudinary = require('cloudinary').v2
 const multer = require('multer')
 const upload = multer({ dest: 'uploads' })
+const fs = require('fs')
 
 const RectasServices = {
 
@@ -70,7 +71,9 @@ const RectasServices = {
           console.log(err)
         } else {
           try {
-            const result = await cloudinary.uploader.upload(req.file.path)
+            const result = await cloudinary.uploader.upload(req.file.path, function () {
+              fs.unlinkSync(req.file.path)
+            })
             resolve(result)
           } catch (error) {
             reject(error.message)
