@@ -2,9 +2,8 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const { AddGooglePass, verifyLocalPassword, generateSessionToken } = require('../Services/serviceLogin')
-const { findUser } = require('../Services/serviceAuth')
 
-const secretKey = 'cervezaNC'
+
 
 const loginFunction = async (req, res) => {
   const { email, password, googlePass } = req.body
@@ -30,9 +29,9 @@ const loginFunction = async (req, res) => {
     // }
 
     // Generar token de sesión
-    const token = jwt.sign({ userId: user.id, email: user.email }, secretKey, { expiresIn: '24h' })
+    const token = generateSessionToken(user)
 
-    res.status(200).json({ usuario: user.usuario, email: user.email, token })
+    res.status(200).json({ usuario: user.usuario, email: user.email, token: token, userID: user.id  })
   } catch (error) {
     console.error('Login error:', error.message);
     res.status(401).json({ error: error.message })

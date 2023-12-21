@@ -42,11 +42,11 @@ const verifyLocalPassword = async (email, password) => {
   }
 
   const userData = {...user.dataValues, id: user.id}
-  return userData.dataValues;
+  return userData;
 }
 
 const generateSessionToken = (user) => {
-  const token = jwt.sign({ userId: user.id, email: user.email }, secretKey, { expiresIn: '24h' })
+  const token = jwt.sign({ userId: user.id, email: user.email }, secretKey, { expiresIn: '7d' })
   return token
 }
 
