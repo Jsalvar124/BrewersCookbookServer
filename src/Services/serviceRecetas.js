@@ -1,6 +1,4 @@
 const { Recetas } = require('../db')
-const { Op } = require('sequelize')
-const { all } = require('../routes/routeIngredientes')
 const cloudinary = require('cloudinary').v2
 const multer = require('multer')
 const upload = multer({ dest: 'uploads' })
@@ -82,15 +80,16 @@ const RectasServices = {
       })
     })
   },
-  createNewReceta: async (recipeData, img) => {
+  createNewReceta: async (recipeData/*, img */) => {
     try {
       console.log(recipeData)
-      if (!recipeData || !img) {
+      if (!recipeData /* || !img */) {
         return 'Recipe information invalid'
       }
       const {
         name,
         author,
+        image,
         type,
         alcoholByVolume,
         originalGravity,
@@ -118,7 +117,7 @@ const RectasServices = {
       const newRecipe = await Recetas.create({
         name,
         author,
-        image: img,
+        image,
         type,
         alcoholByVolume,
         originalGravity,
