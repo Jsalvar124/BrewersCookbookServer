@@ -1,6 +1,9 @@
 const { Recetas } = require('../db')
 const { Op } = require('sequelize')
 const { all } = require('../routes/routeIngredientes')
+const cloudinary = require('cloudinary').v2
+const multer = require('multer')
+const upload = multer({ dest: 'uploads' })
 
 const RectasServices = {
 
@@ -60,15 +63,31 @@ const RectasServices = {
       throw new Error('Error fetching recepie')
     }
   },
-  createNewRecepie: async (recepieData) => {
+  createImg: async (req, res) => {
+    return new Promise((resolve, reject) => {
+      upload.single('image')(req, res, async function (err) {
+        if (err) {
+          console.log(err)
+        } else {
+          try {
+            const result = await cloudinary.uploader.upload(req.file.path)
+            resolve(result)
+          } catch (error) {
+            reject(error.message)
+          }
+        }
+      })
+    })
+  },
+  createNewReceta: async (recipeData, img) => {
     try {
-      if (!recepieData) {
-        return 'Recepie information invalid'
+      console.log(recipeData)
+      if (!recipeData || !img) {
+        return 'Recipe information invalid'
       }
       const {
         name,
         author,
-        image,
         type,
         alcoholByVolume,
         originalGravity,
@@ -91,12 +110,12 @@ const RectasServices = {
         notes,
         EstiloId,
         UserId
-      } = recepieData
+      } = recipeData
 
-      const newRecepie = await Recetas.create({
+      const newRecipe = await Recetas.create({
         name,
         author,
-        image,
+        image: img,
         type,
         alcoholByVolume,
         originalGravity,
@@ -120,12 +139,12 @@ const RectasServices = {
         EstiloId,
         UserId
       })
-      if (newRecepie) {
-        return 'User Created Successfully'
+      if (newRecipe) {
+        return 'Recipe Created Successfully'
       }
     } catch (error) {
       console.error(error)
-      throw new Error('Error fetching Recepie')
+      throw new Error('Error fetching Recipe')
     }
   }
 }
