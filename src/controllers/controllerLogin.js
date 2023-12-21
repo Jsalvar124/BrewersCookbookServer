@@ -1,6 +1,3 @@
-// controllerLogin.js
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
 const { AddGooglePass, verifyLocalPassword, generateSessionToken } = require('../Services/serviceLogin')
 
 
@@ -31,7 +28,7 @@ const loginFunction = async (req, res) => {
     // Generar token de sesión
     const token = generateSessionToken(user)
 
-    res.status(200).json({ usuario: user.usuario, email: user.email, token: token, userID: user.id  })
+    res.status(200).json({ user: user, token: token });
   } catch (error) {
     console.error('Login error:', error.message);
     res.status(401).json({ error: error.message })
