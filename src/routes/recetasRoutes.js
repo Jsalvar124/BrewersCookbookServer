@@ -5,6 +5,7 @@ const RecetasController = require('../controllers/controllerRecetas')
 router.get('/', RecetasController.getAllRecepies)
 router.get('/:id', RecetasController.getRecepieById)
 router.post('/', RecetasController.createNewRecepie)
+router.post('/img', RecetasController.createImg)
 // router.delete('/delete/:id', UserControllers.deleteUser)
 // router.patch('/update/:id', UserControllers.updateUser)
 

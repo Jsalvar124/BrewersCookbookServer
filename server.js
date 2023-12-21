@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors())
 
+
 app.use('/ingredientes', ingredientesRoutes)
 app.use('/users', userRoutes)
 app.use('/estilos', estilosRoutes)
