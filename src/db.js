@@ -2,7 +2,7 @@ require('dotenv').config()
 const { Sequelize } = require('sequelize')
 const { USER, PASS, HOST } = process.env
 const url = `postgres://${USER}:${PASS}@${HOST}/cervezaNC`
-
+// solo comentando
 const modelMalta = require('../src/models/Maltas')
 const modelFermentable = require('../src/models/Fermentables')
 const modelLupulosReceta = require('./models/LupulosReceta')
