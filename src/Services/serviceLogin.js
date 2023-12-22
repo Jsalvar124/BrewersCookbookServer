@@ -2,6 +2,7 @@ const { User } = require('../db')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const secretKey = 'cervezaNC'
+
 const AddGooglePass = async (email, googlePass) => {
   console.log(googlePass)
   try {
@@ -54,9 +55,34 @@ const verifySessionToken = (token) => {
   return jwt.verify(token, secretKey)
 }
 
+const getUserByToken = async (token) => {
+  try {
+    const decodedToken = jwt.verify(token, secretKey);
+    const user = await User.findByPk(decodedToken.userId);
+    if (!user) {
+      throw new Error('Usuario no encontrado');
+    }
+    return user;
+  } catch (error) {
+    throw new Error('Token no válido');
+  }
+}
+
+const createCookie = (res, token) => {
+  const cookieOptions = {
+    httpOnly: true, // La cookie solo es accesible mediante el servidor
+    expires: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000), // Tiempo de expiración en milisegundos
+    path: '/',
+  };
+
+  res.cookie('jwt', token, cookieOptions);
+}
+
 module.exports = {
   AddGooglePass,
   verifyLocalPassword,
   generateSessionToken,
-  verifySessionToken
+  verifySessionToken,
+  createCookie,
+  getUserByToken
 }

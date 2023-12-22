@@ -1,7 +1,7 @@
-// controllerLogin.js
+const { User } = require('../db')
 const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
-const { AddGooglePass, verifyLocalPassword, generateSessionToken } = require('../Services/serviceLogin')
+const secretKey = 'cervezaNC'
+const { AddGooglePass, verifyLocalPassword, generateSessionToken, createCookie } = require('../Services/serviceLogin')
 
 
 
@@ -31,13 +31,37 @@ const loginFunction = async (req, res) => {
     // Generar token de sesión
     const token = generateSessionToken(user)
 
-    res.status(200).json({ usuario: user.usuario, email: user.email, token: token, userID: user.id  })
+    createCookie(res, token)
+
+    res.status(200).json({ user: user, token: token });
   } catch (error) {
     console.error('Login error:', error.message);
     res.status(401).json({ error: error.message })
   }
 }
 
+const getUserByToken = async (req, res) => {
+  const token = req.params.token || req.query.token;
+
+  try {
+    if (!token) {
+      throw new Error('Token no proporcionado');
+    }
+
+    const decodedToken = jwt.verify(token, secretKey);
+    const user = await User.findByPk(decodedToken.userId);
+
+    if (!user) {
+      throw new Error('Usuario no encontrado');
+    }
+
+    res.status(200).json({ usuario: user.usuario, email: user.email, id: user.id });
+  } catch (error) {
+    res.status(401).json({ error: error.message });
+  }
+}
+
 module.exports = {
-  loginFunction
+  loginFunction,
+  getUserByToken
 }
