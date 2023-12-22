@@ -72,7 +72,7 @@ const RectasServices = {
     return new Promise((resolve, reject) => {
       upload.single('image')(req, res, async function (err) {
         if (err) {
-          console.log(err)
+          res.status(500).send(err)
         } else {
           try {
             const result = await cloudinary.uploader.upload(req.file.path, function () {
