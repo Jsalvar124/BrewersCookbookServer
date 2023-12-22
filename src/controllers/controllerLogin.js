@@ -1,4 +1,4 @@
-const { AddGooglePass, verifyLocalPassword, generateSessionToken } = require('../Services/serviceLogin')
+const { AddGooglePass, verifyLocalPassword, generateSessionToken, createCookie } = require('../Services/serviceLogin')
 
 
 
@@ -27,6 +27,8 @@ const loginFunction = async (req, res) => {
 
     // Generar token de sesión
     const token = generateSessionToken(user)
+
+    createCookie(res, token)
 
     res.status(200).json({ user: user, token: token });
   } catch (error) {
