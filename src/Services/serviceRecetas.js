@@ -1,7 +1,16 @@
 const { Recetas } = require('../db')
 const cloudinary = require('cloudinary').v2
 const multer = require('multer')
-const upload = multer({ dest: 'uploads' })
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname)
+  }
+})
+const upload = multer({ storage: storage })
 const fs = require('fs')
 
 cloudinary.config({
@@ -72,12 +81,10 @@ const RectasServices = {
     return new Promise((resolve, reject) => {
       upload.single('image')(req, res, async function (err) {
         if (err) {
-          console.log(err)
+          res.status(500).send(err)
         } else {
           try {
-            const result = await cloudinary.uploader.upload(req.file.path, function () {
-              fs.unlinkSync(req.file.path)
-            })
+            const result = await cloudinary.uploader.upload(req.file.path)
             resolve(result)
           } catch (error) {
             reject(error.message)
