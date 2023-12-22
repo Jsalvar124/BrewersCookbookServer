@@ -37,6 +37,23 @@ const loginFunction = async (req, res) => {
   }
 }
 
+const getUserBySessionToken = async (req, res) => {
+  try {
+    const token = req.cookies.jwt;
+
+    console.log('Token recibido:', token);
+
+    const decodedToken = verifyTokenSession(token);
+    const user = { userId: decodedToken.userId, email: decodedToken.email };
+
+    res.status(200).json(user);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: error.message });
+  }
+}
+
 module.exports = {
-  loginFunction
+  loginFunction,
+  getUserBySessionToken
 }

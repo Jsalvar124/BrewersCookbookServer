@@ -21,7 +21,7 @@ const UserControllers = {
   },
   getUserByToken: async (req, res) => {
     const { token } = req.params;
-
+    console.log('Token recibido:', token);
     try {
       const user = await UserServices.getUserByToken(token);
       res.status(200).json(user);
