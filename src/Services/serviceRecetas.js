@@ -75,9 +75,7 @@ const RectasServices = {
           res.status(500).send(err)
         } else {
           try {
-            const result = await cloudinary.uploader.upload(req.file.path, function () {
-              fs.unlinkSync(req.file.path)
-            })
+            const result = await cloudinary.uploader.upload(req.file.path)
             resolve(result)
           } catch (error) {
             reject(error.message)
