@@ -1,9 +1,9 @@
 const { Router } = require('express')
 const router = Router()
-const { loginFunction, getUserBySessionToken } = require('../controllers/controllerLogin')
+const { loginFunction, getUserByToken } = require('../controllers/controllerLogin')
 
 router.post('/', loginFunction);
-router.get('/login/user', getUserBySessionToken);
+router.get('/token/:token?', getUserByToken);
 
 
 module.exports = router;

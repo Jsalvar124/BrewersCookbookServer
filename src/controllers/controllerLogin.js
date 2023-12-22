@@ -1,3 +1,6 @@
+const { User } = require('../db')
+const jwt = require('jsonwebtoken')
+const secretKey = 'cervezaNC'
 const { AddGooglePass, verifyLocalPassword, generateSessionToken, createCookie } = require('../Services/serviceLogin')
 
 
@@ -37,23 +40,28 @@ const loginFunction = async (req, res) => {
   }
 }
 
-const getUserBySessionToken = async (req, res) => {
+const getUserByToken = async (req, res) => {
+  const token = req.params.token || req.query.token;
+
   try {
-    const token = req.cookies.jwt;
+    if (!token) {
+      throw new Error('Token no proporcionado');
+    }
 
-    console.log('Token recibido:', token);
+    const decodedToken = jwt.verify(token, secretKey);
+    const user = await User.findByPk(decodedToken.userId);
 
-    const decodedToken = verifyTokenSession(token);
-    const user = { userId: decodedToken.userId, email: decodedToken.email };
+    if (!user) {
+      throw new Error('Usuario no encontrado');
+    }
 
-    res.status(200).json(user);
+    res.status(200).json({ usuario: user.usuario, email: user.email, id: user.id });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(401).json({ error: error.message });
   }
 }
 
 module.exports = {
   loginFunction,
-  getUserBySessionToken
+  getUserByToken
 }

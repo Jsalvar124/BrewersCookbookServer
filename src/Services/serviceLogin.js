@@ -55,6 +55,19 @@ const verifySessionToken = (token) => {
   return jwt.verify(token, secretKey)
 }
 
+const getUserByToken = async (token) => {
+  try {
+    const decodedToken = jwt.verify(token, secretKey);
+    const user = await User.findByPk(decodedToken.userId);
+    if (!user) {
+      throw new Error('Usuario no encontrado');
+    }
+    return user;
+  } catch (error) {
+    throw new Error('Token no válido');
+  }
+}
+
 const createCookie = (res, token) => {
   const cookieOptions = {
     httpOnly: true, // La cookie solo es accesible mediante el servidor
@@ -70,5 +83,6 @@ module.exports = {
   verifyLocalPassword,
   generateSessionToken,
   verifySessionToken,
-  createCookie
+  createCookie,
+  getUserByToken
 }
