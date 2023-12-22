@@ -1,16 +1,19 @@
 const { Recetas, Fermentables, LevadurasReceta, LupulosReceta, AdicionesReceta, conn } = require('../db')
 const cloudinary = require('cloudinary').v2
 const multer = require('multer')
+// const path = require('path')
+const { CloudinaryStorage } = require('multer-storage-cloudinary')
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads')
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname)
-  }
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary
+  /* params: {
+    folder: 'peticiones',
+    // allowed_formats: ['jpg', 'png'],
+    public_id: (req, file) => `${Date.now()}-${file.originalname}`
+  } */
 })
-const upload = multer({ storage })
+
+const upload = multer({ storage: storage })
 // const fs = require('fs')
 
 cloudinary.config({
