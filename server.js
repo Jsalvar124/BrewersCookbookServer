@@ -32,16 +32,16 @@ app.get('/', (req, res) => {
   res.send('Bienvenido al servidor de Brewer\'s cookbook.')
 })
 
-app.post('/img', upload.single('image'), async (req, res) => {
-  try {
-    const result = await cloudinary.uploader.upload(req.file.path)
-    res.status(200).json(result)
-    // cuando guardemos en el modelo : result.url
-  } catch (error) {
-    console.log({ errorMessage: error.message })
-    return res.status(500).json({ message: error.message })
-  }
-})
+// app.post('/img', upload.single('image'), async (req, res) => {
+//   try {
+//     const result = await cloudinary.uploader.upload(req.file.path)
+//     res.status(200).json(result)
+//     // cuando guardemos en el modelo : result.url
+//   } catch (error) {
+//     console.log({ errorMessage: error.message })
+//     return res.status(500).json({ message: error.message })
+//   }
+// })
 
 // app.get('/styles', async (req, res) => {
 //   try {

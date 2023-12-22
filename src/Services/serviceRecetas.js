@@ -1,8 +1,15 @@
-const { Recetas } = require('../db')
+const { Recetas, Fermentables, LevadurasReceta, LupulosReceta, AdicionesReceta, conn } = require('../db')
 const cloudinary = require('cloudinary').v2
 const multer = require('multer')
 const upload = multer({ dest: 'uploads' })
 const fs = require('fs')
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+})
+
 
 const RectasServices = {
 
@@ -81,6 +88,7 @@ const RectasServices = {
     })
   },
   createNewReceta: async (recipeData/*, img */) => {
+    const t = await conn.transaction();
     try {
       console.log(recipeData)
       if (!recipeData /* || !img */) {
@@ -111,7 +119,12 @@ const RectasServices = {
         seccondaryFermentationTime,
         notes,
         EstiloId,
-        UserId
+        UserId,
+        fermentables,
+        lupulos,
+        levadura,
+        adiciones
+
       } = recipeData
 
       const newRecipe = await Recetas.create({
@@ -141,10 +154,72 @@ const RectasServices = {
         EstiloId,
         UserId
       })
+
       if (newRecipe) {
+        // Añadir fermentables
+
+        const RecetaId = newRecipe.id
+        // fermentables.forEach(async malta => {
+        //   const {MaltaId, cantidad} = malta
+        //   const newFermentable = await Fermentables.create({MaltaId, RecetaId, cantidad })
+        //   console.log(newFermentable)
+        // });
+        if (fermentables && fermentables.length > 0) {
+          await Promise.all(
+            fermentables.map(async malta => {
+              const { MaltaId, cantidad } = malta;
+              return Fermentables.create({ MaltaId, RecetaId, cantidad });
+            })
+          );
+        }
+        // lupulos.forEach(async lupulo => {
+        //   const {LupuloId, cantidad, uso, tiempo, ibu} = lupulo
+        //   const newLupulo = await LupulosReceta.create({cantidad, tiempo, ibu, uso, LupuloId, RecetaId})
+        //   console.log(newLupulo)
+        // });
+        if (lupulos && lupulos.length > 0) {
+          await Promise.all(
+            lupulos.map(async lupulo => {
+              const { LupuloId, cantidad, uso, tiempo, ibu } = lupulo;
+              return LupulosReceta.create({ cantidad, tiempo, ibu, uso, LupuloId, RecetaId });
+            })
+          );
+        }
+        // levadura.forEach(async levadura => {
+        //   const {LevaduraId, cantidad} = levadura
+        //   const newLevadura = await LevadurasReceta.create({cantidad, LevaduraId, RecetaId })
+        //   console.log(newLevadura)
+        // });
+        if (levadura && levadura.length > 0) {
+          await Promise.all(
+            levadura.map(async levadura => {
+              const { LevaduraId, cantidad } = levadura;
+              return LevadurasReceta.create({ cantidad, LevaduraId, RecetaId });
+            })
+          );
+        }
+        // adiciones.forEach(async adicion => {
+        //   const {name, type, amount, units, notes} = adicion
+        //   const newAdicion = await AdicionesReceta.create({name, type, amount, units, notes, RecetaId })
+        //   console.log(newAdicion)
+        // });
+        if (adiciones && adiciones.length > 0) {
+          await Promise.all(
+            adiciones.map(async adicion => {
+              const { name, type, amount, unit, notes } = adicion;
+              return AdicionesReceta.create({ name, type, amount, unit, notes, RecetaId });
+            })
+          );
+        }
+        console.log(newRecipe)
+        // Commit the transaction
+        await t.commit();
         return 'Recipe Created Successfully'
       }
+
+
     } catch (error) {
+      await t.rollback();
       console.error(error)
       throw new Error('Error fetching Recipe')
     }
