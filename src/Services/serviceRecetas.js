@@ -4,6 +4,12 @@ const multer = require('multer')
 const upload = multer({ dest: 'uploads' })
 const fs = require('fs')
 
+cloudinary.config({
+  cloud_name: 'decswwre4',
+  api_key: '755187982724118',
+  api_secret: 'ghE_EFRr08M5bErnFd-fyE40LGo'
+})
+
 const RectasServices = {
 
   getAllRecepies: async () => {
