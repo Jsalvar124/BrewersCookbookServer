@@ -10,7 +10,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
-
 const RectasServices = {
 
   getAllRecepies: async () => {
@@ -88,7 +87,7 @@ const RectasServices = {
     })
   },
   createNewReceta: async (recipeData/*, img */) => {
-    const t = await conn.transaction();
+    const t = await conn.transaction()
     try {
       console.log(recipeData)
       if (!recipeData /* || !img */) {
@@ -167,10 +166,10 @@ const RectasServices = {
         if (fermentables && fermentables.length > 0) {
           await Promise.all(
             fermentables.map(async malta => {
-              const { MaltaId, cantidad } = malta;
-              return Fermentables.create({ MaltaId, RecetaId, cantidad });
+              const { MaltaId, cantidad } = malta
+              return Fermentables.create({ MaltaId, RecetaId, cantidad })
             })
-          );
+          )
         }
         // lupulos.forEach(async lupulo => {
         //   const {LupuloId, cantidad, uso, tiempo, ibu} = lupulo
@@ -180,10 +179,10 @@ const RectasServices = {
         if (lupulos && lupulos.length > 0) {
           await Promise.all(
             lupulos.map(async lupulo => {
-              const { LupuloId, cantidad, uso, tiempo, ibu } = lupulo;
-              return LupulosReceta.create({ cantidad, tiempo, ibu, uso, LupuloId, RecetaId });
+              const { LupuloId, cantidad, uso, tiempo, ibu } = lupulo
+              return LupulosReceta.create({ cantidad, tiempo, ibu, uso, LupuloId, RecetaId })
             })
-          );
+          )
         }
         // levadura.forEach(async levadura => {
         //   const {LevaduraId, cantidad} = levadura
@@ -193,10 +192,10 @@ const RectasServices = {
         if (levadura && levadura.length > 0) {
           await Promise.all(
             levadura.map(async levadura => {
-              const { LevaduraId, cantidad } = levadura;
-              return LevadurasReceta.create({ cantidad, LevaduraId, RecetaId });
+              const { LevaduraId, cantidad } = levadura
+              return LevadurasReceta.create({ cantidad, LevaduraId, RecetaId })
             })
-          );
+          )
         }
         // adiciones.forEach(async adicion => {
         //   const {name, type, amount, units, notes} = adicion
@@ -206,20 +205,18 @@ const RectasServices = {
         if (adiciones && adiciones.length > 0) {
           await Promise.all(
             adiciones.map(async adicion => {
-              const { name, type, amount, unit, notes } = adicion;
-              return AdicionesReceta.create({ name, type, amount, unit, notes, RecetaId });
+              const { name, type, amount, unit, notes } = adicion
+              return AdicionesReceta.create({ name, type, amount, unit, notes, RecetaId })
             })
-          );
+          )
         }
         console.log(newRecipe)
         // Commit the transaction
-        await t.commit();
+        await t.commit()
         return 'Recipe Created Successfully'
       }
-
-
     } catch (error) {
-      await t.rollback();
+      await t.rollback()
       console.error(error)
       throw new Error('Error fetching Recipe')
     }
